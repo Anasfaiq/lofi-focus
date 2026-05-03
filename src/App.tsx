@@ -1,6 +1,6 @@
 import NavBar from "./components/NavBar";
 import Timer from "./components/Timer";
-// import Tasks from "./components/Tasks";
+import Tasks from "./components/Tasks";
 // import LofiRadio from "./components/LofiRadio";
 // import TodaysFocus from "./components/TodaysFocus";
 import "./App.css";
@@ -18,7 +18,7 @@ const App = () => {
 
         {/* Tasks — col 2, row 1-3 */}
         <div className="row-span-3">
-          {/* <Tasks /> */}
+          <Tasks />
         </div>
 
         {/* Bottom row col 1 — Lo-fi Radio + Today's Focus */}
