@@ -1,1 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-poppins: "Poppins", sans-serif;
+
+  --lf-bg: #f2f4f0;
+  --lf-card: #ffffff;
+  --lf-primary: #2a302b;
+  --lf-accent: #728263;
+  --lf-border: #c8d0c0;
+}
+
+.dark {
+  --lf-bg: #181a18;
+  --lf-card: #222622;
+  --lf-primary: #e1e3e0;
+  --lf-accent: #9caf88;
+  --lf-border: #3a3f3a;
+}
