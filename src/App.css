@@ -20,3 +20,13 @@
   --lf-accent: #9caf88;
   --lf-border: #3a3f3a;
 }
+
+@keyframes lf-wave {
+  0%,
+  100% {
+    transform: scaleY(0.2);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
