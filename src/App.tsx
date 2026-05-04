@@ -1,7 +1,7 @@
 import NavBar from "./components/NavBar";
 import Timer from "./components/Timer";
 import Tasks from "./components/Tasks";
-// import LofiRadio from "./components/LofiRadio";
+import LofiRadio from "./components/LofiRadio";
 // import TodaysFocus from "./components/TodaysFocus";
 import "./App.css";
 
@@ -24,7 +24,7 @@ const App = () => {
         {/* Bottom row col 1 — Lo-fi Radio + Today's Focus */}
         <div className="flex gap-4">
           <div className="flex-1">
-            {/* <LofiRadio /> */}
+            <LofiRadio />
           </div>
           <div className="w-40">
             {/* <TodaysFocus /> */}
