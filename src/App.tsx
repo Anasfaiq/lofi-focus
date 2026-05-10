@@ -12,7 +12,7 @@ const App = () => {
   return (
     <div className="font-poppins bg-(--lf-bg) min-h-screen">
       <NavBar />
-      <main className="grid md:grid-cols-[3fr_2fr] gap-4 p-4 max-w-5xl mx-auto">
+      <main className="grid md:grid-cols-[3fr_2fr] gap-4 p-4 max-w-5xl mx-auto overflow-x-hidden">
         {/* Timer — di desktop col 1, di mobile urutan 1 */}
         <div className="order-1 md:row-span-2 min-w-0">
           <Timer onSessionComplete={recordSession} />
