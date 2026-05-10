@@ -14,7 +14,7 @@ const TodaysFocus = ({ stats }: Props) => {
   return (
     <div className="bg-(--lf-card) p-6 rounded-2xl flex flex-col justify-center gap-3 w-full">
       <div>
-        <p>Today's Focus</p>
+        <p className="text-(--lf-primary)">Today's Focus</p>
       </div>
       <div className="bg-(--lf-bg) border border-(--lf-border) px-4 py-3 rounded-xl text-sm flex items-center justify-between gap-2">
         <p className="text-(--lf-accent) font-medium">Focus hrs</p>
