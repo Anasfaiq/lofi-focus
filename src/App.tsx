@@ -28,7 +28,7 @@ const App = () => {
           <div className="flex-1">
             <LofiRadio />
           </div>
-          <div className="w-40">
+          <div className="flex-1">
             <TodaysFocus stats={stats} />
           </div>
         </div>
