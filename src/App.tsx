@@ -2,35 +2,36 @@ import NavBar from "./components/NavBar";
 import Timer from "./components/Timer";
 import Tasks from "./components/Tasks";
 import LofiRadio from "./components/LofiRadio";
-// import TodaysFocus from "./components/TodaysFocus";
+import TodaysFocus from "./components/TodaysFocus";
+import { useFocusState } from "./hooks/useFocusState";
 import "./App.css";
 
 const App = () => {
+  const { stats, recordSession } = useFocusState();
+
   return (
     <div className="font-poppins bg-(--lf-bg) min-h-screen">
       <NavBar />
-      <main className="grid grid-cols-[3fr_2fr] grid-rows-[auto_auto_auto] gap-4 p-4 max-w-5xl mx-auto">
-
-        {/* Timer — col 1, row 1-2 */}
-        <div className="row-span-2">
-          <Timer />
+      <main className="grid md:grid-cols-[3fr_2fr] gap-4 p-4 max-w-5xl mx-auto">
+        {/* Timer — di desktop col 1, di mobile urutan 1 */}
+        <div className="order-1 md:row-span-2">
+          <Timer onSessionComplete={recordSession} />
         </div>
 
-        {/* Tasks — col 2, row 1-3 */}
-        <div className="row-span-3">
+        {/* Tasks — di desktop col 2, di mobile urutan 3 */}
+        <div className="order-3 md:order-2 md:row-span-3">
           <Tasks />
         </div>
 
-        {/* Bottom row col 1 — Lo-fi Radio + Today's Focus */}
-        <div className="flex gap-4">
+        {/* Radio + TodaysFocus — di desktop col 1 bawah, di mobile urutan 2 */}
+        <div className="order-2 md:order-3 flex gap-4">
           <div className="flex-1">
             <LofiRadio />
           </div>
           <div className="w-40">
-            {/* <TodaysFocus /> */}
+            <TodaysFocus stats={stats} />
           </div>
         </div>
-
       </main>
     </div>
   );
