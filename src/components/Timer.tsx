@@ -27,7 +27,7 @@ const Timer = ({ onSessionComplete }: Props) => {
   // Auto-advance ke mode berikutnya
   const advance = () => {
     if (mode === "focus") {
-      onSessionComplete(DURATIONS.focus / 60)
+      onSessionComplete(DURATIONS.focus / 60);
       const newCompleted = completedSessions + 1;
       setCompletedSessions(newCompleted);
 
@@ -110,12 +110,12 @@ const Timer = ({ onSessionComplete }: Props) => {
   return (
     <div className="bg-(--lf-card) p-6 rounded-2xl flex flex-col items-center gap-10 w-full">
       {/* Tab Mode */}
-      <div className="bg-(--lf-bg) flex items-center gap-1 rounded-xl px-1 py-1">
+      <div className="bg-(--lf-bg) flex items-center gap-1 rounded-xl px-1 py-1 w-full max-w-xs">
         {(["focus", "break", "longBreak"] as const).map((m) => (
           <button
             key={m}
             onClick={() => handleModeChange(m)}
-            className={`px-4 py-1.5 rounded-lg text-sm font-medium capitalize transition-all cursor-pointer ${
+            className={`flex-1 px-2 py-1.5 rounded-lg text-xs sm:text-sm font-medium capitalize transition-all cursor-pointer ${
               mode === m
                 ? "bg-(--lf-accent) text-white"
                 : "text-(--lf-accent) opacity-80 hover:text-(--lf-primary)"
