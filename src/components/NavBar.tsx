@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Sun from "./ui/Sun";
 import Moon from "./ui/Moon";
 import Clock from "./ui/Clock";
