@@ -12,7 +12,11 @@ const CIRCUMFERENCE = 2 * Math.PI * RADIUS;
 
 type Mode = "focus" | "break" | "longBreak";
 
-const Timer = () => {
+type Props = {
+  onSessionComplete: (durationMinutes: number) => void;
+};
+
+const Timer = ({ onSessionComplete }: Props) => {
   const [mode, setMode] = useState<Mode>("focus");
   const [timeLeft, setTimeLeft] = useState(DURATIONS.focus);
   const [isRunning, setIsRunning] = useState(false);
@@ -23,6 +27,7 @@ const Timer = () => {
   // Auto-advance ke mode berikutnya
   const advance = () => {
     if (mode === "focus") {
+      onSessionComplete(DURATIONS.focus / 60)
       const newCompleted = completedSessions + 1;
       setCompletedSessions(newCompleted);
 
